@@ -5,8 +5,7 @@ const app = express()
 let port = 5000
 if (process.env.PORT) port = process.env.PORT;
 
-app.use('/status', router);
-app.use('/stats', router);
+app.use('/', router);
 
 
 app.listen(port, ()=>{
