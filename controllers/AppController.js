@@ -12,9 +12,9 @@ class AppController{
 		})
 	}
 
-	static getStats (req, res){
-		let nUsers = dbClient.nbUsers()
-		let nFiles = dbClient.nbFiles()
+	static async getStats (req, res){
+		let nUsers = await dbClient.nbUsers()
+		let nFiles = await dbClient.nbFiles()
 		res.status(200).json({
 			"users": nUsers,
 			"files": nFiles
