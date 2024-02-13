@@ -5,6 +5,7 @@ const app = express()
 let port = 5000
 if (process.env.PORT) port = process.env.PORT;
 
+app.use(express.json());
 app.use('/', router);
 
 
